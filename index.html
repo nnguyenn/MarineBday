@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Happy Birthday, My Love ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DotGothic16&family=Pacifico&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================================
+       BASE
+    ========================================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --hot-pink: #ff168b;
+      --pink: #ff70b7;
+      --baby-pink: #ffd4e8;
+      --cream: #fff5df;
+      --brown: #6f4225;
+      --dark-brown: #382218;
+      --black: #201318;
+      --gold: #f4c761;
+      --white: #fffdfa;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+
+      background:
+        radial-gradient(circle at 10% 10%, rgba(255,255,255,.6), transparent 18%),
+        linear-gradient(135deg, #ffd8e8, #fff0d5 60%, #f8c9dc);
+
+      font-family: "DotGothic16", sans-serif;
+
+      color: var(--black);
+
+      overflow-x: hidden;
+    }
+
+    .birthday-photo {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    /* =========================================
+       CHEETAH BACKGROUND
+    ========================================= */
+
+    .cheetah-strip {
+      position: fixed;
+
+      top: 0;
+      bottom: 0;
+
+      width: 88px;
+
+      z-index: -2;
+
+      background-color: #d7a04e;
+
+      background-image:
+
+        radial-gradient(
+          ellipse at 20px 22px,
+          #2c1a13 0 7px,
+          transparent 8px
+        ),
+
+        radial-gradient(
+          ellipse at 55px 45px,
+          #2c1a13 0 10px,
+          transparent 11px
+        ),
+
+        radial-gradient(
+          ellipse at 30px 75px,
+          #2c1a13 0 6px,
+          transparent 7px
+        ),
+
+        radial-gradient(
+          ellipse at 75px 95px,
+          #2c1a13 0 8px,
+          transparent 9px
+        ),
+
+        radial-gradient(
+          ellipse at 12px 120px,
+          #2c1a13 0 9px,
+          transparent 10px
+        );
+
+      background-size: 90px 140px;
+
+      box-shadow:
+        inset 0 0 20px rgba(57,30,10,.25);
+    }
+
+    .cheetah-left {
+      left: 0;
+    }
+
+    .cheetah-right {
+      right: 0;
+      transform: scaleX(-1);
+    }
+
+
+    /* =========================================
+       TOP
+    ========================================= */
+
+    .top {
+      width: min(1100px, calc(100% - 130px));
+
+      margin: auto;
+
+      padding-top: 22px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      position: relative;
+
+      z-index: 20;
+    }
+
+    .tiny-logo {
+      transform: rotate(-4deg);
+
+      font-family: "Pacifico", cursive;
+
+      color: var(--hot-pink);
+
+      font-size: 1.35rem;
+
+      text-shadow:
+        2px 2px white;
+    }
+
+    .language-switch {
+      display: flex;
+
+      background: var(--black);
+
+      border: 3px solid var(--black);
+
+      box-shadow:
+        4px 4px 0 var(--pink);
+
+      transform: rotate(1deg);
+    }
+
+    .lang-btn {
+      border: 0;
+
+      background: transparent;
+
+      color: white;
+
+      padding: 9px 13px;
+
+      cursor: pointer;
+
+      font-family: inherit;
+
+      font-weight: bold;
+    }
+
+    .lang-btn.active {
+      background: var(--hot-pink);
+    }
+
+
+    /* =========================================
+       MAIN SCRAPBOOK
+    ========================================= */
+
+    .scrapbook {
+      position: relative;
+
+      width: min(1050px, calc(100% - 140px));
+
+      margin: 35px auto 90px;
+
+      padding: 40px;
+
+      background:
+        linear-gradient(
+          rgba(255,255,255,.3),
+          rgba(255,255,255,.3)
+        ),
+        #fff3df;
+
+      border: 2px solid #e3cab2;
+
+      box-shadow:
+        12px 14px 0 rgba(112,68,40,.13),
+        0 25px 70px rgba(90,43,62,.16);
+
+      transform: rotate(-.3deg);
+    }
+
+
+    /* paper texture-ish dots */
+
+    .scrapbook::before {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      opacity: .14;
+
+      background-image:
+        radial-gradient(#a77965 1px, transparent 1px);
+
+      background-size: 9px 9px;
+    }
+
+
+    /* =========================================
+       MAGAZINE TITLE
+    ========================================= */
+
+    .magazine-header {
+      position: relative;
+
+      display: grid;
+
+      grid-template-columns: 1.2fr .8fr;
+
+      gap: 30px;
+
+      align-items: center;
+
+      min-height: 430px;
+    }
+
+    .headline-area {
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .issue-label {
+      display: inline-block;
+
+      margin-bottom: 16px;
+
+      padding: 7px 12px;
+
+      background: black;
+
+      color: white;
+
+      transform: rotate(-3deg);
+
+      font-size: .75rem;
+
+      letter-spacing: 2px;
+    }
+
+    .main-title {
+      font-family: "DM Serif Display", serif;
+
+      font-size: clamp(4.3rem, 10vw, 8rem);
+
+      line-height: .83;
+
+      letter-spacing: -5px;
+
+      color: var(--black);
+    }
+
+    .main-title .pink {
+      color: var(--hot-pink);
+
+      font-style: italic;
+    }
+
+    .title-script {
+      display: block;
+
+      margin-top: 15px;
+
+      margin-left: 12px;
+
+      font-family: "Pacifico", cursive;
+
+      font-size: clamp(1.8rem, 4vw, 3rem);
+
+      color: var(--brown);
+
+      transform: rotate(-3deg);
+    }
+
+    .subtitle {
+      max-width: 550px;
+
+      margin-top: 25px;
+
+      line-height: 1.8;
+
+      color: #75544d;
+
+      font-size: .98rem;
+    }
+
+
+    /* =========================================
+       POLAROID
+    ========================================= */
+
+    .photo-side {
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+    }
+
+    .polaroid {
+      position: relative;
+
+      width: min(315px, 100%);
+
+      padding: 14px 14px 56px;
+
+      background: white;
+
+      box-shadow:
+        8px 10px 0 rgba(71,43,34,.16);
+
+      transform: rotate(6deg);
+    }
+
+    .photo-placeholder {
+      height: 330px;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          rgba(255,80,150,.25),
+          rgba(255,220,190,.2)
+        ),
+
+        repeating-linear-gradient(
+          45deg,
+          #ffc4de,
+          #ffc4de 12px,
+          #ffdcec 12px,
+          #ffdcec 24px
+        );
+
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      padding: 30px;
+
+      color: #b14878;
+
+      font-size: .9rem;
+
+      line-height: 1.7;
+    }
+
+    .polaroid-caption {
+      position: absolute;
+
+      bottom: 15px;
+      left: 0;
+      right: 0;
+
+      text-align: center;
+
+      font-family: "Pacifico", cursive;
+
+      color: var(--hot-pink);
+
+      font-size: 1.25rem;
+    }
+
+    .tape {
+      position: absolute;
+
+      width: 90px;
+      height: 28px;
+
+      background: rgba(255, 213, 95, .7);
+
+      top: -14px;
+      left: 50%;
+
+      transform: translateX(-50%) rotate(-6deg);
+
+      opacity: .9;
+    }
+
+
+    /* =========================================
+       STICKERS
+    ========================================= */
+
+    .sticker {
+      position: absolute;
+
+      z-index: 6;
+
+      user-select: none;
+
+      filter:
+        drop-shadow(3px 4px 0 rgba(40,20,30,.12));
+    }
+
+    .kiss {
+      right: -5px;
+      top: 90px;
+
+      font-size: 4rem;
+
+      transform: rotate(15deg);
+    }
+
+    .heart-sticker {
+      left: 43%;
+      top: 60px;
+
+      font-size: 2.6rem;
+
+      transform: rotate(-16deg);
+    }
+
+    .sparkle-sticker {
+      right: 32%;
+      bottom: 12px;
+
+      font-size: 2.1rem;
+    }
+
+
+    /* =========================================
+       COLLAGE LABELS
+    ========================================= */
+
+    .cutouts {
+      margin: 20px 0 40px;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 10px;
+    }
+
+    .cutout {
+      display: inline-block;
+
+      padding: 7px 13px;
+
+      font-family: Arial, sans-serif;
+
+      font-weight: 900;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+
+      box-shadow:
+        3px 4px 0 rgba(34,20,25,.15);
+    }
+
+    .cutout:nth-child(1) {
+      background: var(--hot-pink);
+      color: white;
+      transform: rotate(-3deg);
+    }
+
+    .cutout:nth-child(2) {
+      background: black;
+      color: #ffb3d6;
+      transform: rotate(2deg);
+    }
+
+    .cutout:nth-child(3) {
+      background: #ffd45c;
+      transform: rotate(-1deg);
+    }
+
+    .cutout:nth-child(4) {
+      background: white;
+      color: var(--hot-pink);
+      border: 2px solid var(--hot-pink);
+      transform: rotate(3deg);
+    }
+
+
+    /* =========================================
+       AGE SECTION
+    ========================================= */
+
+    .age-section {
+      position: relative;
+
+      margin-top: 25px;
+
+      padding: 35px;
+
+      display: grid;
+
+      grid-template-columns: .75fr 1.25fr;
+
+      gap: 35px;
+
+      align-items: center;
+
+      background: #f5b0ce;
+
+      border: 4px solid var(--black);
+
+      box-shadow:
+        9px 10px 0 var(--black);
+
+      transform: rotate(.7deg);
+    }
+
+    .age-left {
+      text-align: center;
+
+      position: relative;
+    }
+
+    .age-small {
+      font-size: .72rem;
+
+      letter-spacing: 4px;
+
+      font-weight: bold;
+    }
+
+    .age-number {
+      font-family: "DM Serif Display", serif;
+
+      font-style: italic;
+
+      font-size: clamp(7rem, 18vw, 11rem);
+
+      line-height: .9;
+
+      color: var(--cream);
+
+      -webkit-text-stroke: 4px var(--black);
+
+      text-shadow:
+        8px 7px 0 var(--hot-pink);
+
+      transition:
+        transform .45s cubic-bezier(.2,1.5,.4,1);
+    }
+
+    .age-number.pop {
+      transform:
+        rotate(-7deg)
+        scale(1.17);
+    }
+
+    .age-right {
+      position: relative;
+
+      z-index: 3;
+    }
+
+    .age-title {
+      font-family: "DM Serif Display", serif;
+
+      font-size: clamp(2.2rem, 5vw, 4rem);
+
+      line-height: 1;
+
+      margin-bottom: 14px;
+    }
+
+    .age-copy {
+      line-height: 1.9;
+
+      color: #56343f;
+
+      max-width: 520px;
+    }
+
+
+    /* birthday button */
+
+    .birthday-button {
+      margin-top: 25px;
+
+      padding: 13px 21px;
+
+      border: 3px solid black;
+
+      background: var(--cream);
+
+      color: black;
+
+      box-shadow:
+        5px 5px 0 var(--hot-pink);
+
+      font-family: inherit;
+
+      font-size: .9rem;
+
+      cursor: pointer;
+
+      transform: rotate(-1deg);
+
+      transition: .16s;
+    }
+
+    .birthday-button:hover {
+      transform:
+        translateY(-3px)
+        rotate(1deg);
+    }
+
+    .birthday-button:active {
+      transform:
+        translate(4px, 4px);
+
+      box-shadow:
+        1px 1px 0 var(--hot-pink);
+    }
+
+    /* =========================================
+      BACKGROUND SPARKLES
+    ========================================= */
+
+    .sparkle-layer {
+      position: fixed;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      overflow: hidden;
+
+      pointer-events: none;
+
+      z-index: 5;
+    }
+
+    /* Individual sparkle */
+
+    .screen-sparkle {
+      position: absolute;
+
+      top: -40px;
+
+      color: white;
+
+      pointer-events: none;
+
+      text-shadow:
+        0 0 6px rgba(255, 255, 255, 0.9),
+        0 0 12px rgba(255, 105, 180, 0.5);
+
+      animation:
+        sparkleFall linear forwards,
+        sparkleTwinkle ease-in-out infinite;
+    }
+
+
+    /* Slowly fall down the page */
+
+    @keyframes sparkleFall {
+
+      from {
+        transform:
+          translateY(-50px)
+          translateX(0)
+          rotate(0deg);
+      }
+
+      to {
+        transform:
+          translateY(110vh)
+          translateX(var(--drift))
+          rotate(180deg);
+      }
+
+    }
+
+
+    /* Soft pulsing so they don't overpower the page */
+
+    @keyframes sparkleTwinkle {
+
+      0%,
+      100% {
+        opacity: 0.15;
+      }
+
+      50% {
+        opacity: 0.75;
+      }
+
+    }
+
+
+    /* =========================================
+       LOVE NOTE
+    ========================================= */
+
+    .love-section {
+      margin-top: 65px;
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 40px;
+
+      align-items: center;
+    }
+
+
+    /* cheetah love card */
+
+    .cheetah-card {
+      position: relative;
+
+      min-height: 320px;
+
+      padding: 35px;
+
+      color: white;
+
+      background-color: #b87937;
+
+      background-image:
+
+        radial-gradient(
+          ellipse at 20% 20%,
+          #20130e 0 8px,
+          transparent 9px
+        ),
+
+        radial-gradient(
+          ellipse at 70% 25%,
+          #20130e 0 12px,
+          transparent 13px
+        ),
+
+        radial-gradient(
+          ellipse at 35% 60%,
+          #20130e 0 9px,
+          transparent 10px
+        ),
+
+        radial-gradient(
+          ellipse at 80% 75%,
+          #20130e 0 11px,
+          transparent 12px
+        );
+
+      background-size: 105px 90px;
+
+      border: 5px solid black;
+
+      transform: rotate(-2deg);
+
+      box-shadow:
+        10px 11px 0 var(--pink);
+    }
+
+    .cheetah-card::after {
+      content: "♡";
+
+      position: absolute;
+
+      right: 18px;
+      bottom: 0;
+
+      font-family: serif;
+
+      font-size: 9rem;
+
+      color: rgba(255,255,255,.12);
+    }
+
+    .cheetah-card h2 {
+      font-family: "Pacifico", cursive;
+
+      color: #ff85bd;
+
+      font-size: 2.3rem;
+
+      text-shadow:
+        3px 3px black;
+
+      margin-bottom: 18px;
+    }
+
+    .cheetah-card p {
+      background: rgba(0,0,0,.72);
+
+      padding: 16px;
+
+      line-height: 1.9;
+
+      font-size: .9rem;
+    }
+
+
+    /* note */
+
+    .note-card {
+      position: relative;
+
+      background: #fffdf4;
+
+      padding: 38px;
+
+      border: 1px solid #dac9aa;
+
+      box-shadow:
+        8px 9px 0 rgba(94,60,37,.15);
+
+      transform: rotate(2deg);
+    }
+
+    .note-card::before {
+      content: "";
+
+      position: absolute;
+
+      left: 28px;
+      top: 0;
+      bottom: 0;
+
+      width: 2px;
+
+      background: rgba(255,74,126,.25);
+    }
+
+    .note-title {
+      font-family: "Pacifico", cursive;
+
+      font-size: 2rem;
+
+      color: var(--hot-pink);
+
+      margin-bottom: 18px;
+    }
+
+    .note-text {
+      padding-left: 18px;
+
+      font-family: "DM Serif Display", serif;
+
+      font-style: italic;
+
+      line-height: 1.8;
+
+      font-size: 1.1rem;
+
+      color: #503831;
+    }
+
+    .signature {
+      margin-top: 20px;
+
+      padding-left: 18px;
+
+      font-family: "Pacifico", cursive;
+
+      color: var(--hot-pink);
+    }
+
+
+    /* =========================================
+       BOTTOM
+    ========================================= */
+
+    .bottom-banner {
+      margin-top: 65px;
+
+      padding: 16px;
+
+      background: black;
+
+      color: white;
+
+      text-align: center;
+
+      border: 4px solid black;
+
+      font-size: .85rem;
+
+      letter-spacing: 2px;
+
+      transform: rotate(-.7deg);
+
+      box-shadow:
+        7px 7px 0 var(--hot-pink);
+    }
+
+    .bottom-banner span {
+      color: #ff7eb8;
+    }
+
+    /* =========================================
+   VIDEO SURPRISE
+========================================= */
+
+.video-surprise {
+  position: relative;
+
+  margin-top: 60px;
+  padding: 55px 40px 45px;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255,255,255,.65),
+      transparent 20%
+    ),
+    #f8b7d4;
+
+  border: 4px solid var(--black);
+
+  box-shadow:
+    11px 12px 0 var(--black);
+
+  text-align: center;
+
+  overflow: hidden;
+
+
+  /* hidden initially */
+  opacity: 0;
+
+  transform:
+    translateY(120px)
+    scale(.88)
+    rotate(-2deg);
+
+  clip-path:
+    inset(45% 12% 45% 12% round 30px);
+
+  pointer-events: none;
+
+  max-height: 0;
+
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+
+  transition:
+    opacity .7s ease,
+    transform 1.1s cubic-bezier(.16, 1, .3, 1),
+    clip-path 1s cubic-bezier(.16, 1, .3, 1),
+    max-height 1.3s cubic-bezier(.16, 1, .3, 1),
+    padding 1s ease,
+    margin 1s ease;
+}
+
+
+/* when revealed */
+
+.video-surprise.show {
+  opacity: 1;
+
+  transform:
+    translateY(0)
+    scale(1)
+    rotate(.4deg);
+
+  clip-path:
+    inset(0 0 0 0 round 0);
+
+  pointer-events: auto;
+
+  max-height: 1200px;
+
+  margin-top: 70px;
+
+  padding: 55px 40px 45px;
+}
+
+
+/* =========================================
+   VIDEO TITLE
+========================================= */
+
+.video-heading {
+  position: relative;
+  z-index: 3;
+
+  margin-bottom: 30px;
+}
+
+
+.video-small-title {
+  display: inline-block;
+
+  padding: 7px 12px;
+
+  background: black;
+
+  color: white;
+
+  font-size: .7rem;
+
+  letter-spacing: 2px;
+
+  transform: rotate(-2deg);
+
+  margin-bottom: 13px;
+}
+
+
+.video-heading h2 {
+  font-family: "Pacifico", cursive;
+
+  font-size: clamp(2.3rem, 6vw, 4rem);
+
+  color: var(--hot-pink);
+
+  text-shadow:
+    3px 3px 0 white,
+    5px 5px 0 rgba(0,0,0,.15);
+}
+
+
+/* =========================================
+   CHEETAH VIDEO FRAME
+========================================= */
+
+.video-frame {
+  position: relative;
+
+  width: min(420px, 90%);
+
+  margin: auto;
+
+  padding: 18px;
+
+  background-color: #bc7b38;
+
+  background-image:
+    radial-gradient(
+      ellipse at 15px 18px,
+      #24140e 0 6px,
+      transparent 7px
+    ),
+    radial-gradient(
+      ellipse at 48px 35px,
+      #24140e 0 10px,
+      transparent 11px
+    ),
+    radial-gradient(
+      ellipse at 78px 14px,
+      #24140e 0 7px,
+      transparent 8px
+    ),
+    radial-gradient(
+      ellipse at 33px 72px,
+      #24140e 0 8px,
+      transparent 9px
+    );
+
+  background-size: 95px 90px;
+
+  border: 4px solid black;
+
+  box-shadow:
+    10px 11px 0 var(--hot-pink),
+    16px 17px 0 rgba(0,0,0,.12);
+
+  transform: rotate(-.7deg);
+}
+
+
+/* inner black trim */
+
+.video-frame::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 9px;
+
+  border: 3px solid black;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+
+.birthday-video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  background: black;
+}
+
+
+/* =========================================
+   CAPTION
+========================================= */
+
+.video-caption {
+  margin-top: 28px;
+
+  font-family: "Pacifico", cursive;
+
+  font-size: 1.3rem;
+
+  color: #713d58;
+
+  transform: rotate(-1deg);
+}
+
+/* =========================================
+   BIRTHDAY TRANSITION
+========================================= */
+
+.cheetah-card,
+.note-card,
+.bottom-banner {
+  transition:
+    transform 1s cubic-bezier(.68, -.35, .32, 1.35),
+    opacity .65s ease,
+    filter .65s ease;
+}
+
+
+/* left card flies left + twists */
+
+.love-section.transitioning .cheetah-card {
+  transform:
+    translateX(-130vw)
+    translateY(90px)
+    rotate(-24deg)
+    scale(.82);
+
+  opacity: 0;
+
+  filter: blur(4px);
+}
+
+
+/* right note flies the opposite direction */
+
+.love-section.transitioning .note-card {
+  transform:
+    translateX(130vw)
+    translateY(-70px)
+    rotate(20deg)
+    scale(.9);
+
+  opacity: 0;
+
+  filter: blur(4px);
+
+  transition-delay: .12s;
+}
+
+
+/* banner drops away */
+
+.bottom-banner.transitioning {
+  transform:
+    translateY(180px)
+    rotate(5deg)
+    scale(.8);
+
+  opacity: 0;
+
+  filter: blur(4px);
+
+  transition-delay: .22s;
+}
+
+
+/* eventually remove their layout space */
+
+.love-section.gone,
+.bottom-banner.gone {
+  display: none;
+}
+
+/* =========================================
+   RANDOM SCRAPBOOK STICKERS
+========================================= */
+
+.video-sticker {
+  position: absolute;
+
+  z-index: 4;
+
+  padding: 7px 12px;
+
+  font-family: Arial, sans-serif;
+
+  font-weight: 900;
+
+  border: 3px solid black;
+
+  box-shadow:
+    4px 4px 0 black;
+}
+
+
+.sticker-one {
+  top: 25px;
+  left: 25px;
+
+  background: #ffd44f;
+
+  transform: rotate(-9deg);
+}
+
+
+.sticker-two {
+  right: 25px;
+  top: 45px;
+
+  background: white;
+
+  color: var(--hot-pink);
+
+  transform: rotate(7deg);
+}
+
+
+.video-kiss {
+  position: absolute;
+
+  right: 8%;
+  bottom: 15px;
+
+  font-size: 3rem;
+
+  transform: rotate(14deg);
+}
+
+
+
+    /* =========================================
+       SPARKLES
+    ========================================= */
+
+    .floating-sparkle {
+      position: fixed;
+
+      pointer-events: none;
+
+      z-index: 999;
+
+      animation:
+        explode 1.4s ease-out forwards;
+    }
+
+    @keyframes explode {
+
+      from {
+        opacity: 1;
+
+        transform:
+          translate(-50%, -50%)
+          scale(.4)
+          rotate(0deg);
+      }
+
+      to {
+        opacity: 0;
+
+        transform:
+          translate(
+            calc(-50% + var(--x)),
+            calc(-50% + var(--y))
+          )
+          scale(1.25)
+          rotate(290deg);
+      }
+
+    }
+
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+
+    @media (max-width: 850px) {
+
+      .cheetah-strip {
+        width: 35px;
+      }
+
+      .top,
+      .scrapbook {
+        width: calc(100% - 60px);
+      }
+
+      .scrapbook {
+        padding: 28px 20px;
+      }
+
+      .magazine-header {
+        grid-template-columns: 1fr;
+      }
+
+      .headline-area {
+        text-align: center;
+      }
+
+      .subtitle {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-title {
+        letter-spacing: -3px;
+      }
+
+      .polaroid {
+        width: 280px;
+      }
+
+      .age-section,
+      .love-section {
+        grid-template-columns: 1fr;
+      }
+
+      .age-section {
+        padding: 28px 20px;
+      }
+
+      .age-right {
+        text-align: center;
+      }
+
+      .age-copy {
+        margin: auto;
+      }
+
+    }
+
+
+    @media (max-width: 520px) {
+
+      .top,
+      .scrapbook {
+        width: calc(100% - 38px);
+      }
+
+      .cheetah-strip {
+        display: none;
+      }
+
+      .tiny-logo {
+        font-size: 1rem;
+      }
+
+      .main-title {
+        font-size: 4rem;
+      }
+
+      .photo-placeholder {
+        height: 280px;
+      }
+
+      .age-number {
+        -webkit-text-stroke: 3px black;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+  <div class="sparkle-layer" id="sparkleLayer"></div>
+
+  <!-- CHEETAH SIDES -->
+  <div class="cheetah-strip cheetah-left"></div>
+  <div class="cheetah-strip cheetah-right"></div>
+
+
+  <!-- TOP -->
+  <header class="top">
+
+    <div class="tiny-logo">
+      for my favorite girl ♡
+    </div>
+
+
+    <div class="language-switch">
+
+      <button
+        class="lang-btn active"
+        data-lang="en"
+      >
+        EN
+      </button>
+
+      <button
+        class="lang-btn"
+        data-lang="ja"
+      >
+        日本語
+      </button>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- SCRAPBOOK -->
+  <main class="scrapbook">
+
+
+    <!-- HERO -->
+    <section class="magazine-header">
+
+
+      <div class="headline-area">
+
+        <div
+          class="issue-label"
+          data-en="SPECIAL BIRTHDAY ISSUE • ONE OF ONE"
+          data-ja="バースデー特別号 • 世界にひとり"
+        >
+          SPECIAL BIRTHDAY ISSUE • ONE OF ONE
+        </div>
+
+
+        <h1 class="main-title">
+
+          <span
+            data-en="Happy"
+            data-ja="Happy"
+          >
+            Happy
+          </span>
+
+          <br>
+
+          <span
+            class="pink"
+            data-en="Birthday"
+            data-ja="Birthday"
+          >
+            Birthday
+          </span>
+
+        </h1>
+
+
+        <span
+          class="title-script"
+          data-en="to my beautiful wife ♡"
+          data-ja="大好きな妻へ ♡"
+        >
+          to my beautiful wife ♡
+        </span>
+
+
+        <p
+          class="subtitle"
+          data-en="A tiny corner of the internet made just for you — because somehow the cutest girl in the world gets even prettier every year."
+          data-ja="これは君だけのために作った、小さなインターネットの世界。世界で一番可愛い君が、毎年もっと素敵になっていくから♡"
+        >
+          A tiny corner of the internet made just for you —
+          because somehow the cutest girl in the world gets
+          even prettier every year.
+        </p>
+
+
+        <div class="cutouts">
+
+          <span class="cutout">
+            ギャル
+          </span>
+
+          <span
+            class="cutout"
+            data-en="WIFE MATERIAL"
+            data-ja="最高の奥さん"
+          >
+            WIFE MATERIAL
+          </span>
+
+          <span class="cutout">
+            ♡ LOVE ♡
+          </span>
+
+          <span
+            class="cutout"
+            data-en="FOREVER GIRL"
+            data-ja="永遠に大好き"
+          >
+            FOREVER GIRL
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Replace this box with her photo later -->
+      <div class="photo-side">
+
+        <div class="polaroid">
+
+          <div class="tape"></div>
+
+          <img
+            src="images/wife.jpg"
+            alt="My wife"
+            class="birthday-photo"
+          >
+
+          <div
+            class="polaroid-caption"
+            data-en="my pretty girl ♡"
+            data-ja="僕の可愛い子 ♡"
+          >
+            my pretty girl ♡
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="sticker kiss">
+        💋
+      </div>
+
+      <div class="sticker heart-sticker">
+        💗
+      </div>
+
+      <div class="sticker sparkle-sticker">
+        ✦
+      </div>
+
+
+    </section>
+
+
+
+    <!-- AGE -->
+    <section class="age-section">
+
+      <div class="age-left">
+
+        <div
+          class="age-small"
+          data-en="BIRTHDAY GIRL AGE"
+          data-ja="バースデーガールの年齢"
+        >
+          BIRTHDAY GIRL AGE
+        </div>
+
+        <div
+          class="age-number"
+          id="ageNumber"
+        >
+          24
+        </div>
+
+      </div>
+
+
+      <div class="age-right">
+
+        <h2
+          class="age-title"
+          id="ageTitle"
+          data-en-before="One more candle..."
+          data-ja-before="もう一本のキャンドル..."
+          data-en-after="Twenty-five looks beautiful on you."
+          data-ja-after="25歳も、君にすごく似合ってる♡"
+        >
+          One more candle...
+        </h2>
+
+
+        <p
+          class="age-copy"
+          id="ageCopy"
+          data-en-before="24 was beautiful, but there's something extra special about getting to spend another birthday loving you."
+          data-ja-before="24歳の君も素敵だった。でも、また君の誕生日を一緒に迎えられることが何より特別。"
+          data-en-after="Happy 25th birthday, baby. I'm so lucky that I get to watch you grow, laugh with you, annoy you, love you, and call you my wife."
+          data-ja-after="25歳のお誕生日おめでとう、ベイビー。君の成長をそばで見て、一緒に笑って、たまに困らせて、愛して、そして君を妻と呼べることが本当に幸せ。"
+        >
+          24 was beautiful, but there's something extra special
+          about getting to spend another birthday loving you.
+        </p>
+
+
+        <button
+          class="birthday-button"
+          id="birthdayButton"
+          data-en-before="♡ it's officially your birthday ♡"
+          data-ja-before="♡ 今日から25歳 ♡"
+          data-en-after="♡ happy 25th, my love ♡"
+          data-ja-after="♡ 25歳おめでとう、大好き ♡"
+        >
+          ♡ it's officially your birthday ♡
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- LOVE SECTION -->
+    <section class="love-section">
+
+
+      <div class="cheetah-card">
+
+        <h2
+          data-en="Certified Gyaru ♡"
+          data-ja="認定ギャル ♡"
+        >
+          Certified Gyaru ♡
+        </h2>
+
+
+        <p
+          data-en="Cheetah print. Glossy lips. Pink everything. Pretty nails. Big attitude. Bigger heart. And somehow she's still the sweetest person I know."
+          data-ja="ヒョウ柄、つやつやリップ、ピンク、可愛いネイル、強めなギャル感。でも心は誰よりも優しくて、僕が知っている中で一番愛しい人。"
+        >
+          Cheetah print. Glossy lips. Pink everything.
+          Pretty nails. Big attitude. Bigger heart.
+          And somehow she's still the sweetest person I know.
+        </p>
+
+      </div>
+
+
+
+      <div class="note-card">
+
+        <div
+          class="note-title"
+          data-en="a little note for you..."
+          data-ja="君への小さなメッセージ..."
+        >
+          a little note for you...
+        </div>
+
+
+        <div
+          class="note-text"
+          data-en="No matter how many birthdays pass, I hope you always know how deeply loved you are. Life is more fun, more beautiful, and a lot sweeter because I get to share it with you."
+          data-ja="これから何回誕生日を迎えても、君がどれだけ愛されているか忘れないでほしい。君と一緒だから、人生はもっと楽しくて、もっと綺麗で、もっと幸せ。"
+        >
+          No matter how many birthdays pass,
+          I hope you always know how deeply loved you are.
+
+          Life is more fun, more beautiful, and a lot sweeter
+          because I get to share it with you.
+        </div>
+
+
+        <div
+          class="signature"
+          data-en="always yours ♡"
+          data-ja="ずっと君のもの ♡"
+        >
+          always yours ♡
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- BOTTOM -->
+    <div
+      class="bottom-banner"
+      data-en="25 YEARS CUTE • 25 YEARS ICONIC • <span>FOREVER MY GIRL ♡</span>"
+      data-ja="25歳も可愛い • 25歳も最高 • <span>ずっと僕の大好きな人 ♡</span>"
+    >
+      25 YEARS CUTE •
+      25 YEARS ICONIC •
+      <span>FOREVER MY GIRL ♡</span>
+    </div>
+
+    <!-- =========================================
+        VIDEO SURPRISE
+    ========================================= -->
+
+    <section class="video-surprise" id="videoSurprise">
+
+      <div class="video-sticker sticker-one">25 ♡</div>
+      <div class="video-sticker sticker-two">LOVE YOU</div>
+      <div class="video-kiss">💋</div>
+
+      <div class="video-heading">
+
+        <div
+          class="video-small-title"
+          data-en="A LITTLE SOMETHING FOR YOU..."
+          data-ja="君へのちょっとしたサプライズ..."
+        >
+          A LITTLE SOMETHING FOR YOU...
+        </div>
+
+        <h2
+          data-en="For my favorite girl ♡"
+          data-ja="世界で一番大好きな君へ ♡"
+        >
+          For my favorite girl ♡
+        </h2>
+
+      </div>
+
+
+      <div class="video-frame">
+
+        <video
+          id="birthdayVideo"
+          class="birthday-video"
+          controls
+          playsinline
+          preload="metadata"
+        >
+          <source
+            src="videos/birthday-video.mp4"
+            type="video/mp4"
+          >
+
+          Your browser does not support video playback.
+        </video>
+
+      </div>
+
+
+      <p
+        class="video-caption"
+        data-en="made with all my love, just for you ♡"
+        data-ja="愛をいっぱい込めて、君だけのために作ったよ ♡"
+      >
+        made with all my love, just for you ♡
+      </p>
+
+    </section>
+
+
+  </main>
+
+
+
+  <script>
+
+    /* =========================================
+       VARIABLES
+    ========================================= */
+
+    let currentLanguage = "en";
+    let birthdayStarted = false;
+
+    const ageNumber =
+      document.getElementById("ageNumber");
+
+    const birthdayButton =
+      document.getElementById("birthdayButton");
+
+    const ageTitle =
+      document.getElementById("ageTitle");
+
+    const ageCopy =
+      document.getElementById("ageCopy");
+
+
+    /* =========================================
+       LANGUAGE
+    ========================================= */
+
+    document
+      .querySelectorAll(".lang-btn")
+      .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+          currentLanguage =
+            button.dataset.lang;
+
+
+          document
+            .querySelectorAll(".lang-btn")
+            .forEach(btn =>
+              btn.classList.remove("active")
+            );
+
+          button.classList.add("active");
+
+
+          document
+            .querySelectorAll("[data-en][data-ja]")
+            .forEach(element => {
+
+              element.innerHTML =
+                element.dataset[currentLanguage];
+
+            });
+
+
+          updateBirthdayText();
+
+        });
+
+      });
+    
+    /* =========================================
+      SLOW BACKGROUND SPARKLES
+    ========================================= */
+
+    const sparkleLayer =
+      document.getElementById("sparkleLayer");
+
+
+    function createBackgroundSparkle() {
+
+      const sparkle =
+        document.createElement("span");
+
+
+      const sparkleTypes = [
+        "✦",
+        "✧",
+        "⋆",
+        "✨",
+        "♡"
+      ];
+
+
+      sparkle.className =
+        "screen-sparkle";
+
+
+      /* Random sparkle symbol */
+
+      sparkle.textContent =
+        sparkleTypes[
+          Math.floor(
+            Math.random() * sparkleTypes.length
+          )
+        ];
+
+
+      /* Random horizontal starting point */
+
+      sparkle.style.left =
+        Math.random() * 100 + "vw";
+
+
+      /* Random size */
+
+      const size =
+        8 + Math.random() * 22;
+
+      sparkle.style.fontSize =
+        size + "px";
+
+
+      /* Slow falling speed:
+        somewhere between 12 and 24 seconds */
+
+      const duration =
+        12 + Math.random() * 12;
+
+      sparkle.style.animationDuration =
+        duration + "s, " +
+        (2 + Math.random() * 3) + "s";
+
+
+      /* Random sideways drift */
+
+      const drift =
+        -60 + Math.random() * 120;
+
+      sparkle.style.setProperty(
+        "--drift",
+        drift + "px"
+      );
+
+
+      /* Slight transparency */
+
+      sparkle.style.opacity =
+        0.2 + Math.random() * 0.5;
+
+
+      sparkleLayer.appendChild(sparkle);
+
+
+      /* Remove sparkle after animation finishes */
+
+      setTimeout(() => {
+
+        sparkle.remove();
+
+      }, duration * 1000);
+
+    }
+
+
+    /* Create new sparkles slowly */
+
+    setInterval(() => {
+
+      createBackgroundSparkle();
+
+    }, 550);
+
+
+    /* Add a few immediately so screen isn't empty */
+
+    for (let i = 0; i < 12; i++) {
+
+      setTimeout(() => {
+
+        createBackgroundSparkle();
+
+      }, i * 250);
+
+    }
+
+
+    /* =========================================
+       AGE 24 → 25
+    ========================================= */
+
+    birthdayButton.addEventListener(
+      "click",
+      event => {
+
+        if (birthdayStarted) {
+          return;
+        }
+
+
+        birthdayStarted = true;
+
+
+        /* =========================================
+          24 → 25
+        ========================================= */
+
+        ageNumber.classList.add("pop");
+
+
+        setTimeout(() => {
+
+          ageNumber.textContent = "25";
+
+        }, 180);
+
+
+        setTimeout(() => {
+
+          ageNumber.classList.remove("pop");
+
+        }, 650);
+
+
+        updateBirthdayText();
+
+
+        /* =========================================
+          SPARKLES
+        ========================================= */
+
+        const rect =
+          birthdayButton.getBoundingClientRect();
+
+
+        createSparkles(
+          rect.left + rect.width / 2,
+          rect.top + rect.height / 2
+        );
+
+
+        /* =========================================
+          GET SECTIONS
+        ========================================= */
+
+        const loveSection =
+          document.querySelector(".love-section");
+
+        const bottomBanner =
+          document.querySelector(".bottom-banner");
+
+        const videoSurprise =
+          document.getElementById("videoSurprise");
+
+
+        /* =========================================
+          FLY CARDS AWAY
+        ========================================= */
+
+        setTimeout(() => {
+
+          loveSection.classList.add(
+            "transitioning"
+          );
+
+          bottomBanner.classList.add(
+            "transitioning"
+          );
+
+        }, 700);
+
+
+        /* =========================================
+          REMOVE OLD CONTENT
+        ========================================= */
+
+        setTimeout(() => {
+
+          loveSection.classList.add("gone");
+
+          bottomBanner.classList.add("gone");
+
+
+          /* =========================================
+            REVEAL VIDEO
+          ========================================= */
+
+          videoSurprise.classList.add("show");
+
+
+          /* scroll gently toward video */
+
+          setTimeout(() => {
+
+            videoSurprise.scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+
+          }, 250);
+
+
+          /* another sparkle burst */
+
+          const videoRect =
+            videoSurprise.getBoundingClientRect();
+
+
+          createSparkles(
+            window.innerWidth / 2,
+            videoRect.top + 150
+          );
+
+        }, 1750);
+
+      }
+    );
+
+
+    /* =========================================
+       TEXT STATE
+    ========================================= */
+
+    function updateBirthdayText() {
+
+      if (!birthdayStarted) {
+
+        ageTitle.innerHTML =
+          ageTitle.dataset[
+            currentLanguage + "Before"
+          ];
+
+        ageCopy.innerHTML =
+          ageCopy.dataset[
+            currentLanguage + "Before"
+          ];
+
+        birthdayButton.innerHTML =
+          birthdayButton.dataset[
+            currentLanguage + "Before"
+          ];
+
+        ageNumber.textContent = "24";
+
+        return;
+      }
+
+
+      ageTitle.innerHTML =
+        ageTitle.dataset[
+          currentLanguage + "After"
+        ];
+
+
+      ageCopy.innerHTML =
+        ageCopy.dataset[
+          currentLanguage + "After"
+        ];
+
+
+      birthdayButton.innerHTML =
+        birthdayButton.dataset[
+          currentLanguage + "After"
+        ];
+
+
+      ageNumber.textContent = "25";
+
+    }
+
+
+    /* =========================================
+       SPARKLES
+    ========================================= */
+
+    function createSparkles(x, y) {
+
+      const items = [
+        "♡",
+        "♥",
+        "✨",
+        "💗",
+        "💋",
+        "✦",
+        "🎀"
+      ];
+
+
+      for (let i = 0; i < 30; i++) {
+
+        const piece =
+          document.createElement("div");
+
+
+        piece.className =
+          "floating-sparkle";
+
+
+        piece.textContent =
+          items[
+            Math.floor(
+              Math.random() *
+              items.length
+            )
+          ];
+
+
+        piece.style.left =
+          x + "px";
+
+        piece.style.top =
+          y + "px";
+
+
+        const angle =
+          Math.random() *
+          Math.PI *
+          2;
+
+
+        const distance =
+          70 +
+          Math.random() *
+          260;
+
+
+        piece.style.setProperty(
+          "--x",
+          Math.cos(angle) *
+          distance +
+          "px"
+        );
+
+
+        piece.style.setProperty(
+          "--y",
+          Math.sin(angle) *
+          distance +
+          "px"
+        );
+
+
+        piece.style.fontSize =
+          14 +
+          Math.random() *
+          24 +
+          "px";
+
+
+        document.body.appendChild(piece);
+
+
+        setTimeout(
+          () => piece.remove(),
+          1450
+        );
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
